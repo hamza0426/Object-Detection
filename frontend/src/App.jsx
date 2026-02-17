@@ -518,7 +518,7 @@ function App() {
   const fileInputRef = useRef(null);
   const videoRef = useRef(null);
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = "http://localhost:8000";
 
   // Handle file selection
   const handleFileChange = (e) => {
@@ -608,12 +608,22 @@ function App() {
   };
 
   const handleVideoError = (e) => {
-    console.error("Video playback error:", e);
+    const video = e.target;
+    const errorCode = video?.error?.code;
+    const errorMessage = video?.error?.message || "Unknown error";
+    
+    const errorDetails = {
+      code: errorCode,
+      message: errorMessage,
+      url: video?.src,
+    };
+    
+    console.error("Video playback error:", errorDetails);
     setError("Video failed to load. You can still download it.");
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 md:p-6">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 p-4 md:p-6">
       <header className="text-center mb-8 md:mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           🍎 Fruit Detection & Counting System
@@ -679,7 +689,7 @@ function App() {
               className={`w-full py-4 px-6 rounded-xl font-semibold text-lg text-white ${
                 !videoFile || loading
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+                  : "bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
               }`}
             >
               {loading ? "Processing Video..." : "🚀 Detect & Count Fruits"}
