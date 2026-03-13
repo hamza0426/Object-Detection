@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://hamza0426-object-detection.hf.space";
 const BAR_COLORS = [
   "#0ea5e9",
   "#10b981",

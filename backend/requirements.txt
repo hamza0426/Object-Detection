@@ -1,10 +1,8 @@
-flask==3.0.2
-flask-cors==4.0.0
-ultralytics==8.1.0
-opencv-python==4.9.0.80
-numpy==1.26.4
-torch>=2.0.0
-uvicorn
 fastapi
+uvicorn
+python-multipart
+ultralytics==8.3.0
 opencv-python-headless
-gunicorn
+numpy==1.26.4
+torch==2.4.0
+torchvision==0.19.0
