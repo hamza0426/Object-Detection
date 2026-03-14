@@ -1,100 +1,151 @@
-# 🎯 Object Detection & Tracking System
-
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-FF6B35?style=for-the-badge)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.9-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![Deployed](https://img.shields.io/badge/Deployed-Live-22c55e?style=for-the-badge)
+<img src="https://img.shields.io/badge/-%F0%9F%8E%AF%20OBJECT%20DETECT-0284c7?style=for-the-badge&labelColor=0ea5e9&color=0284c7" alt="ObjectDetect" height="40"/>
 
-**A full-stack computer vision application that detects, tracks, and counts objects in uploaded videos using the YOLOv8 neural network — with a professional React dashboard.**
+# Object Detection & Tracking System
 
-[🚀 Live Demo](https://object-detection-hamza.vercel.app/) · [📦 Backend API](https://hamza0426-object-detection.hf.space/docs) · [⭐ Star this repo](#)
+**Upload any video. Detect every object. Track them all in real-time.**
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-0284c7?style=for-the-badge)](https://object-detection-hamza.vercel.app/)
+[![API Docs](https://img.shields.io/badge/📡%20API%20Docs-FastAPI-0ea5e9?style=for-the-badge)](https://hamza0426-object-detection.hf.space/docs)
+[![GitHub](https://img.shields.io/badge/⭐%20Star%20this%20Repo-GitHub-1e40af?style=for-the-badge)](https://github.com/hamza0426/Object-Detection)
+
+![Python](https://img.shields.io/badge/Python-3.10-0284c7?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Latest-0ea5e9?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-18-38bdf8?style=flat-square&logo=react&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-1d4ed8?style=flat-square)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.9-0369a1?style=flat-square&logo=opencv&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-0284c7?style=flat-square&logo=tailwindcss&logoColor=white)
+![Deployed](https://img.shields.io/badge/Status-Live-22c55e?style=flat-square)
 
 </div>
 
 ---
 
-## ✨ Features
+## 📸 Screenshots
 
-- 🎬 **Video Upload** — Drag & drop or browse to upload MP4, MOV, AVI, MKV files
-- 🤖 **YOLOv8 Detection** — Real-time object detection using the YOLOv8n neural network trained on 80 COCO classes
-- 🔢 **Object Tracking** — Unique ID assignment per object using BotSort tracker — counts each unique object once even as it moves across frames
-- 📊 **Detection Dashboard** — Live results with class breakdown, confidence scores, frame count, and animated progress
-- 🎥 **Annotated Video Output** — Download the processed video with bounding boxes and labels drawn on every frame
-- 📱 **Fully Responsive** — Works on desktop, tablet, and mobile
+> *Add your screenshots here after taking them locally*
+
+<!-- Replace these with your actual screenshots -->
+<!-- Tip: Drag and drop images directly into GitHub's README editor to upload them -->
+
+| Dashboard | Detection Results |
+|:---------:|:-----------------:|
+| *Upload your screenshot here* | *Upload your results screenshot here* |
 
 ---
 
-## 🖥️ Demo
+<div align="center">
 
-> Upload any video → AI processes it → Get annotated output with detection statistics
+## 🔷 How It Works
 
-**Example — Orange Conveyor Belt Detection:**
+</div>
 
-The system correctly detects and tracks individual oranges moving on an industrial conveyor belt, assigning unique IDs and counting them as they pass through the frame.
+```
+ ┌─────────────┐     ┌──────────────────┐     ┌─────────────────────┐
+ │ Upload Video │ ──▶ │  YOLOv8 Detection │ ──▶ │  BotSort Tracking   │
+ │  (any format)│     │  imgsz=640        │     │  Unique ID per obj  │
+ └─────────────┘     └──────────────────┘     └─────────────────────┘
+                                                          │
+ ┌─────────────┐     ┌──────────────────┐                ▼
+ │  React UI   │ ◀── │  FastAPI Response │ ◀── ┌─────────────────────┐
+ │  Dashboard  │     │  JSON + Video URL │     │  FFmpeg H264 Encode │
+ └─────────────┘     └──────────────────┘     │  Browser Compatible │
+                                               └─────────────────────┘
+```
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎬 **Drag & Drop Upload** | Upload MP4, MOV, AVI, MKV — up to 100MB |
+| 🤖 **YOLOv8 Detection** | 80+ COCO object classes detected per frame |
+| 🔢 **Unique ID Tracking** | BotSort assigns each object a unique ID — counts it once even as it moves |
+| 📊 **Live Dashboard** | Animated results with class breakdown, confidence scores, frame count |
+| 🎥 **Annotated Video** | Download processed video with bounding boxes + labels on every frame |
+| ⚡ **Step Progress** | Real-time progress with descriptive labels during processing |
+| 📱 **Fully Responsive** | Clean UI that works on desktop, tablet, and mobile |
 
 ---
 
 ## 🏗️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 18, Vite, Tailwind CSS |
-| **Backend** | FastAPI, Python 3.10 |
-| **ML Model** | YOLOv8n (Ultralytics) |
-| **Computer Vision** | OpenCV |
-| **Object Tracking** | BotSort (custom config) |
-| **Video Encoding** | FFmpeg (H264/yuv420p) |
-| **Frontend Deploy** | Vercel |
-| **Backend Deploy** | Hugging Face Spaces (Docker) |
+<div align="center">
+
+| Layer | Technology | Purpose |
+|:-----:|:----------:|:-------:|
+| **Frontend** | React 18 + Vite + Tailwind CSS | UI Dashboard |
+| **Backend** | FastAPI + Python 3.10 | REST API Server |
+| **ML Model** | YOLOv8n (Ultralytics) | Object Detection |
+| **Tracking** | BotSort (custom config) | Multi-object Tracking |
+| **Vision** | OpenCV | Frame Processing |
+| **Encoding** | FFmpeg libx264 | Browser-compatible Video |
+| **Frontend Host** | Vercel | Auto-deploy from GitHub |
+| **Backend Host** | Hugging Face Spaces | Docker Container |
+
+</div>
 
 ---
 
-## 🚀 Running Locally
+## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.9+
-- Node.js 18+
-- pip
 
-### Backend
+- **Python** 3.9 or higher
+- **Node.js** 18 or higher
+- **pip** and **npm**
+
+---
+
+### ⚙️ Backend Setup
 
 ```bash
-# Clone the repo
+# 1. Clone the repository
 git clone https://github.com/hamza0426/Object-Detection.git
-cd Object-Detection
+cd Object-Detection/backend
 
-# Install dependencies
+# 2. Install Python dependencies
 pip install fastapi uvicorn python-multipart ultralytics opencv-python numpy torch torchvision
 
-# Run the backend
+# 3. Start the backend server
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Backend will be live at `http://localhost:8000`
-API docs available at `http://localhost:8000/docs`
+✅ Backend live at `http://localhost:8000`  
+📡 API docs at `http://localhost:8000/docs`
 
-### Frontend
+---
+
+### 🖥️ Frontend Setup
 
 ```bash
-# Navigate to frontend folder
+# 1. Navigate to frontend directory
 cd frontend
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Update API URL in src/App.jsx
-# Change: const API_URL = "https://hamza0426-object-detection.hf.space"
-# To:     const API_URL = "http://localhost:8000"
+# 3. Update API URL in src/App.jsx
+#    Change: const API_URL = "https://hamza0426-object-detection.hf.space"
+#    To:     const API_URL = "http://localhost:8000"
 
-# Run the frontend
+# 4. Start the development server
 npm run dev
 ```
 
-Frontend will be live at `http://localhost:5173`
+✅ Frontend live at `http://localhost:5173`
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description |
+|:------:|----------|-------------|
+| `POST` | `/process-video` | Upload a video — runs full detection + tracking pipeline |
+| `GET` | `/outputs/{filename}` | Stream the processed annotated video |
+| `GET` | `/download/{filename}` | Download the processed video file |
 
 ---
 
@@ -102,70 +153,70 @@ Frontend will be live at `http://localhost:5173`
 
 ```
 Object-Detection/
-├── app.py                  # FastAPI backend — detection & tracking logic
-├── Dockerfile              # Docker config for Hugging Face deployment
-├── requirements.txt        # Python dependencies
-├── custom_tracker.yaml     # BotSort tracker config (auto-generated)
-├── uploads/                # Temporary uploaded videos (gitignored)
-├── outputs/                # Processed output videos (gitignored)
-└── frontend/
-    ├── src/
-    │   └── App.jsx         # Main React component
-    ├── index.html
-    ├── vite.config.js
-    └── package.json
+│
+├── backend/
+│   ├── app.py                  # FastAPI server — detection & tracking logic
+│   ├── Dockerfile              # Docker config for Hugging Face deployment
+│   ├── requirements.txt        # Python dependencies
+│   ├── uploads/                # Temp video uploads      (gitignored)
+│   └── outputs/                # Processed output videos (gitignored)
+│
+├── frontend/
+│   ├── src/
+│   │   └── App.jsx             # Main React dashboard component
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## ⚙️ How It Works
+## 🌐 Deployment Architecture
 
 ```
-User uploads video
-       ↓
-FastAPI receives file → saves to disk
-       ↓
-YOLOv8n runs detection on every frame (imgsz=640, conf=0.2)
-       ↓
-BotSort tracker assigns unique IDs — tracks objects across frames
-       ↓
-OpenCV draws bounding boxes + labels on each frame
-       ↓
-FFmpeg re-encodes output to H264 (browser-compatible)
-       ↓
-Frontend displays results + streams annotated video
+ GitHub Repo
+      │
+      ├──── Vercel ──────────────▶  frontend (React)
+      │     Auto-deploy on push      https://object-detection-hamza.vercel.app
+      │
+      └──── Hugging Face Spaces ──▶  backend (FastAPI + Docker)
+            Manual push               https://hamza0426-object-detection.hf.space
 ```
 
----
-
-## 🌐 Deployment
-
-| Service | Platform | URL |
-|---|---|---|
-| Frontend | Vercel | https://object-detection-hamza.vercel.app |
-| Backend API | Hugging Face Spaces | https://hamza0426-object-detection.hf.space |
-
-> **Note:** The Hugging Face free tier may take 30–60 seconds to wake up if idle. Processing a video takes 3–5 minutes on the free CPU tier.
+> ⚠️ **Note:** Hugging Face free tier may take **30–60 seconds to wake up** if idle.  
+> Processing time is **3–5 minutes** on the free CPU tier.  
+> For best results, run locally where full CPU speed is available.
 
 ---
 
 ## 📚 Academic Context
 
-This project was developed as part of the **Digital Image Processing (DIP) Lab** course. It demonstrates practical application of:
-- Convolutional Neural Networks for object detection
-- Multi-object tracking algorithms
-- REST API design for ML model serving
-- Full-stack deployment of AI applications
+This project was built as part of the **Digital Image Processing (DIP) Lab** course and demonstrates:
 
----
-
-## 👨‍💻 Author
-
-**Hamza** — Computer Science Student  
-[GitHub](https://github.com/hamza0426) · [LinkedIn](https://www.linkedin.com/in/muhammad-hamza-owais)
+- Convolutional Neural Networks for real-time object detection
+- Multi-object tracking with unique ID assignment
+- REST API design for serving ML models
+- Full-stack deployment of AI-powered web applications
 
 ---
 
 <div align="center">
-Made with ❤️ by Hamza
+
+## 👨‍💻 Author
+
+**Muhammad Hamza Owais**  
+Computer Science Graduate
+
+[![GitHub](https://img.shields.io/badge/GitHub-hamza0426-0284c7?style=flat-square&logo=github)](https://github.com/hamza0426)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0ea5e9?style=flat-square&logo=linkedin)](https://linkedin.com/in/muhammad-hamza-owais)
+
+---
+
+*Made with ❤️ by Hamza — Object Detection Project*
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=hamza0426.Object-Detection&style=flat-square&color=0284c7)
+
 </div>
