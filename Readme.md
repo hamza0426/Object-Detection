@@ -6,7 +6,7 @@
 
 **Upload any video. Detect every object. Track them all in real-time.**
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-0284c7?style=for-the-badge)](https://object-detection-hamza.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Web-0284c7?style=for-the-badge)](https://object-detection-hamza.vercel.app/)
 [![API Docs](https://img.shields.io/badge/📡%20API%20Docs-FastAPI-0ea5e9?style=for-the-badge)](https://hamza0426-object-detection.hf.space/docs)
 [![GitHub](https://img.shields.io/badge/⭐%20Star%20this%20Repo-GitHub-1e40af?style=for-the-badge)](https://github.com/hamza0426/Object-Detection)
 
