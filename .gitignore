@@ -3,8 +3,7 @@
 # =====================================
 .DS_Store
 Thumbs.db
-.env
-.env.local
+.env.production
 
 # =====================================
 # Python / Backend
@@ -17,10 +16,16 @@ backend/venv/
 backend/uploads/*
 backend/outputs/*
 backend/*.log
+backend/.venv/
+
+# Auto-generated tracker config
+backend/custom_tracker.yaml
+backend/raw_*.mp4
 
 # Ignore YOLO model weights (VERY IMPORTANT)
 backend/*.pt
 backend/*.onnx
+backend/*.pth
 
 # Keep empty folders
 !backend/uploads/.gitkeep
@@ -32,7 +37,11 @@ backend/*.onnx
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
-frontend/.env
+
+# =====================================
+# Object-Detection folder 
+# =====================================
+Object-Detection/
 
 # =====================================
 # Logs
@@ -40,6 +49,7 @@ frontend/.env
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
+*.log
 
 # =====================================
 # VS Code / IDE

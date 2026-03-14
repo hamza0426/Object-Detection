@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from "react";
 
 const API_URL = "https://hamza0426-object-detection.hf.space";
@@ -198,7 +199,6 @@ export default function App() {
               </span>
             </div>
 
-            {/* Badges — hide some on very small screens */}
             <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[0.65rem] sm:text-[0.72rem] font-semibold px-2 sm:px-2.5 py-1 rounded-md border border-emerald-200 bg-emerald-50 text-emerald-700">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot flex-shrink-0" />
