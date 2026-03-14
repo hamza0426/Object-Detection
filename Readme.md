@@ -26,17 +26,20 @@
 
 | Dashboard | Detection Results |
 |:---------:|:-----------------:|
-<img width="1893" height="564" alt="Image" src="https://github.com/user-attachments/assets/a38e09bd-6138-4453-aa99-267c8a4e32db" />
+<img width="1893" alt="Dashboard" src="https://github.com/user-attachments/assets/a38e09bd-6138-4453-aa99-267c8a4e32db" />
 
-<img width="1894" height="764" alt="Image" src="https://github.com/user-attachments/assets/764b211a-ee10-4424-a937-d0f60b49b4ae" />
+<img width="1894" alt="Detection Results" src="https://github.com/user-attachments/assets/764b211a-ee10-4424-a937-d0f60b49b4ae" />
 
-<img width="905" height="708" alt="Image" src="https://github.com/user-attachments/assets/90edbe0c-e221-48c2-8111-a6a5b47595a0" />
-
-<img width="892" height="764" alt="Image" src="https://github.com/user-attachments/assets/8144f0fe-a4a3-4646-a91a-63d9681c8480" />
-
-<img width="936" height="692" alt="Image" src="https://github.com/user-attachments/assets/0ad43a18-7206-4943-938d-135a94e40b20" />
-
-<img width="932" height="623" alt="Image" src="https://github.com/user-attachments/assets/5c0dc9a4-de67-41a9-bd9d-b9e44ffef0c0" />
+<table>
+  <tr>
+    <td><img alt="Mobile View 1" src="https://github.com/user-attachments/assets/90edbe0c-e221-48c2-8111-a6a5b47595a0" /></td>
+    <td><img alt="Mobile View 2" src="https://github.com/user-attachments/assets/8144f0fe-a4a3-4646-a91a-63d9681c8480" /></td>
+  </tr>
+  <tr>
+    <td><img alt="Results Panel" src="https://github.com/user-attachments/assets/0ad43a18-7206-4943-938d-135a94e40b20" /></td>
+    <td><img alt="Detection Output" src="https://github.com/user-attachments/assets/5c0dc9a4-de67-41a9-bd9d-b9e44ffef0c0" /></td>
+  </tr>
+</table>
 
 ---
 
